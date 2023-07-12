@@ -1,4 +1,4 @@
-import styles from "../components/HomePage/homepage.module.css";
+import styles from "../components/Homepage/homepage.module.css";
 import Link from "next/link";
 
 function HomePage(props) {
