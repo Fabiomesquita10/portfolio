@@ -1,0 +1,83 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensure the image stays behind the overlay */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.3)
+  );
+}
+
+.content {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  transform: translate(20px, 20px); /* Adjust the values for positioning */
+  text-align: left;
+}
+
+.name {
+  font-size: 3rem;
+  color: white;
+  text-align: left; /* Align the text to the left */
+  margin-left: 20px; /* Add a left margin for positioning */
+  border-bottom: #bb0404 2px solid;
+}
+
+.job {
+  top: -2rem;
+  display: inline-block;
+  text-align: center;
+  margin-left: 20px; /* Add a left margin for positioning */
+  color: white;
+  position: relative; /* Enable positioning for the pseudo-element */
+}
+
+.job::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Adjust the distance of the border from the text */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Adjust the thickness of the border */
+  background-color: #bb0404;
+}
+
+.buttonContainer {
+  margin-left: 20px; /* Add a left margin for positioning */
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  border: 2px solid #bb0404;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #bb0404;
+  color: white;
+}

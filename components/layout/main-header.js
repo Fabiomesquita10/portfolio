@@ -6,7 +6,8 @@ function MainHeader() {
     <header className={classes.header}>
       <nav className={classes.navigation}>
         <div className={classes.navLinks}>
-          <Link href="/">About me</Link>
+          <Link href="/">Homepage</Link>
+          <Link href="/aboutMe">About me</Link>
           <Link href="/portfolio">Portfolio</Link>
           <Link href="/experience">Experience</Link>
           <Link href="/contacts">Contacts</Link>
