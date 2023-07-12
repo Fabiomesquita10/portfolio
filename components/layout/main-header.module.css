@@ -3,9 +3,14 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 0.3rem 1%;
-  height: 2rem;
-  background-color: #464648;
+  padding: 0.5rem 1%;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: #bb0404 1px solid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 }
 
 .navigation {
@@ -21,17 +26,17 @@
 
 .navigation a:hover {
   text-decoration: none;
-  color: #8f1c1c;
+  color: #bb0404;
 }
 
 .navLinks {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 @media (min-width: 768px) {
   .navigation a {
-    font-size: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
   }
 }
-
