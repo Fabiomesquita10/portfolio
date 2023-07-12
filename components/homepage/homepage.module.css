@@ -11,7 +11,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1; /* Ensure the image stays behind the overlay */
+  z-index: -1;
 }
 
 .overlay {
@@ -31,15 +31,15 @@
   position: absolute;
   top: 25%;
   left: 15%;
-  transform: translate(20px, 20px); /* Adjust the values for positioning */
+  transform: translate(20px, 20px);
   text-align: left;
 }
 
 .name {
   font-size: 3rem;
   color: white;
-  text-align: left; /* Align the text to the left */
-  margin-left: 20px; /* Add a left margin for positioning */
+  text-align: left;
+  margin-left: 20px;
   border-bottom: #bb0404 2px solid;
 }
 
@@ -47,23 +47,23 @@
   top: -2rem;
   display: inline-block;
   text-align: center;
-  margin-left: 20px; /* Add a left margin for positioning */
+  margin-left: 20px;
   color: white;
-  position: relative; /* Enable positioning for the pseudo-element */
+  position: relative;
 }
 
 .job::after {
   content: "";
   position: absolute;
-  bottom: -2px; /* Adjust the distance of the border from the text */
+  bottom: -2px;
   left: 0;
   width: 100%;
-  height: 2px; /* Adjust the thickness of the border */
+  height: 2px;
   background-color: #bb0404;
 }
 
 .buttonContainer {
-  margin-left: 20px; /* Add a left margin for positioning */
+  margin-left: 20px;
 }
 
 .button {
@@ -80,4 +80,25 @@
 .button:hover {
   background-color: #bb0404;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .content {
+    top: 35%;
+    left: 5%;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .job {
+    top: -1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .buttonContainer {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
 }
