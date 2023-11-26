@@ -1,0 +1,47 @@
+/* ArrowButton.module.css */
+
+.button {
+  position: relative;
+  display: flex; /* Usar flex para alinhar os elementos lado a lado */
+  align-items: center; /* Alinhar verticalmente ao centro */
+  background-color: transparent;
+  text-decoration: none;
+  border-radius: 20px;
+  border: 2px solid #bb0404;
+  overflow: hidden;
+  color: white;
+  z-index: 1; /* Ensure the text is on top */
+  margin-top: 20px;
+  width: 10rem;
+  margin-left: 5rem;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #bb0404;
+  transition: width 0.3s ease-in-out;
+  z-index: -1; /* Put the pseudo-element behind the text */
+}
+
+.button:hover::before {
+  width: 100%;
+}
+
+.faIcon {
+  background-color: #bb0404;
+  padding: 0.5rem; /* Ajuste conforme necessário */
+  border-radius: 50%;
+}
+
+.faIcon i {
+  color: white;
+}
+
+.text {
+  flex: 1; /* Ocupar o restante do espaço disponível */
+}
