@@ -9,6 +9,8 @@ body {
   font-family: 'Open Sans', 'Lato', sans-serif;
   color: #ffffff;
   background-color: #000000;
+  cursor: none;
+  overflow: hidden;
 } 
 
 h1,

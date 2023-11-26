@@ -1,0 +1,37 @@
+/* DarkModeToggle.module.css */
+
+.darkModeToggle {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    background-color: #fff; /* Cor de fundo do botão */
+    border: 1px solid #ccc; /* Borda do botão */
+    border-radius: 50%; /* Bordas arredondadas para tornar o botão redondo */
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10000; /* Certifique-se de que o botão esteja acima de outros elementos na página */
+  }
+  
+  .darkModeToggle svg {
+    color: #333; /* Cor do ícone no modo claro */
+    transition: color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor */
+  }
+  
+  .darkModeToggle:hover svg {
+    color: #555; /* Cor do ícone no modo claro ao passar o mouse */
+  }
+  
+  .darkMode {
+    background-color: #333; /* Cor de fundo do botão no modo noturno */
+  }
+  
+  .darkModeToggle.darkMode svg {
+    color: #fff; /* Cor do ícone no modo noturno */
+  }
+  
+  .darkModeToggle.darkMode:hover svg {
+    color: #ddd; /* Cor do ícone no modo noturno ao passar o mouse */
+  }
+  
