@@ -5,10 +5,16 @@ import MainHeader from './main-header';
 import styles from "./layout.module.css";
 
 function Layout(props) {
+  const { isMenuOpen } = props;
+  const { setMenuOpen } = props;
+  const { calculatedZoom } = props;
+  const { setCalculatedZoom } = props;
+  const { isPhoneMode } = props;
+  const { setPhoneMode } = props;
 
   return (
     <Fragment>
-      <MainHeader />
+      <MainHeader isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} calculatedZoom={calculatedZoom} setCalculatedZoom={setCalculatedZoom} isPhoneMode={isPhoneMode} setPhoneMode={setPhoneMode} />
       <main className={styles.content}>{props.children}</main>
     </Fragment>
   );

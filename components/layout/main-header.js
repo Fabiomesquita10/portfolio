@@ -5,11 +5,14 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import classes from "./main-header.module.css";
 
-function MainHeader() {
-  const [isMenuOpen, setMenuOpen] = useState(true);
-  const [calculatedZoom, setCalculatedZoom] = useState(null);
-  const [isPhoneMode, setPhoneMode] = useState(false);
-
+function MainHeader({
+  isMenuOpen,
+  setMenuOpen,
+  calculatedZoom,
+  setCalculatedZoom,
+  isPhoneMode,
+  setPhoneMode,
+}) {
   const toggleMenu = () => {
     setMenuOpen((prevState) => !prevState);
   };
@@ -75,7 +78,7 @@ function MainHeader() {
                   flexDirection: "column", // Add this line
                 }
               : {
-                  display: "flex"
+                  display: "flex",
                 }
           }
         >

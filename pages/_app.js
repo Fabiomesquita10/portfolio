@@ -12,6 +12,9 @@ import DarkModeToggle from "../components/layout/DarkModeToggle";
 function MyApp({ Component, pageProps }) {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(true);
+  const [calculatedZoom, setCalculatedZoom] = useState(null);
+  const [isPhoneMode, setPhoneMode] = useState(false);
 
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
@@ -20,9 +23,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <UserProvider>
-      <Layout>
+      <Layout isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} calculatedZoom={calculatedZoom} setCalculatedZoom={setCalculatedZoom} isPhoneMode={isPhoneMode} setPhoneMode={setPhoneMode}>
         <DarkModeToggle isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-        <Component {...pageProps} isDarkMode={isDarkMode} />
+        <Component {...pageProps} isDarkMode={isDarkMode} isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} calculatedZoom={calculatedZoom} setCalculatedZoom={setCalculatedZoom} isPhoneMode={isPhoneMode} setPhoneMode={setPhoneMode} />
       </Layout>
     </UserProvider>
   );
