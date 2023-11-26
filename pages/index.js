@@ -1,7 +1,7 @@
 import styles from "../components/homepage/homepage.module.css";
-import Link from "next/link";
 import CustomCursor from "../components/cursor/customCursor";
 import Image from "next/image";
+import ArrowButton from "../components/buttons/ArrowButton";
 
 function HomePage(props) {
   const { isDarkMode } = props;
@@ -22,26 +22,46 @@ function HomePage(props) {
     <div className={styles.container} style={{ backgroundColor, color }}>
       <CustomCursor />
       <div className={styles.overlay}></div>
-      <div className={(calculatedZoom > 250) | isPhoneMode ? styles.content_zoomed : styles.content_unzoomed}>
+      <div
+        className={
+          (calculatedZoom > 250) | isPhoneMode
+            ? styles.content_zoomed
+            : styles.content_unzoomed
+        }
+      >
         <div className={styles.imageContainer}>
-          <Image
-            src="/profile_pic.png"
-            alt="Descrição da imagem"
-            width={400} // Ajuste conforme necessário
-            height={400} // Ajuste conforme necessário
-          />
+          {calculatedZoom <= 150 ? (
+            <Image
+              src="/profile_pic.png"
+              alt="Descrição da imagem"
+              width={400} // Ajuste conforme necessário
+              height={350} // Ajuste conforme necessário
+            />
+          ) : null}
+          {(calculatedZoom > 150) & (calculatedZoom <= 200) ? (
+            <Image
+              src="/profile_pic.png"
+              alt="Descrição da imagem"
+              width={280} // Ajuste conforme necessário
+              height={240} // Ajuste conforme necessário
+            />
+          ) : null}
+          {calculatedZoom > 200 ? (
+            <Image
+              src="/profile_pic.png"
+              alt="Descrição da imagem"
+              width={170} // Ajuste conforme necessário
+              height={150} // Ajuste conforme necessário
+            />
+          ) : null}
         </div>
         <div className={styles.infoContainer}>
-          <h1 className={styles.name} style={{ color }}>
-            Fabio Mesquita
-          </h1>
+          <h1 className={styles.name}>Fabio Mesquita</h1>
           <h2 className={styles.job} style={{ color }}>
             Backend & AI Developer
           </h2>
-          <div className={styles.buttonContainer}>
-            <Link className={styles.button} style={{ color }} href="/aboutMe">
-              About Me!
-            </Link>
+          <div>
+            <ArrowButton color={color}/>
           </div>
         </div>
       </div>
@@ -50,7 +70,3 @@ function HomePage(props) {
 }
 
 export default HomePage;
-
-// export async function getStaticProps() {
-//     return ""
-// }

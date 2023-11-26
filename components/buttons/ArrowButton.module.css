@@ -1,0 +1,29 @@
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  text-decoration: none;
+  border-radius: 20px;
+  border: 2px solid #bb0404;
+  overflow: hidden;
+  color: white;
+  z-index: 1; /* Ensure the text is on top */
+  margin-top: 20px;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #bb0404;
+  transition: width 0.3s ease-in-out;
+  z-index: -1; /* Put the pseudo-element behind the text */
+}
+
+.button:hover::before {
+  width: 100%;
+}
