@@ -1,14 +1,12 @@
 import Layout from "../components/layout/layout";
 import { UserProvider } from "@auth0/nextjs-auth0/client";
+import { useState } from "react";
 import "../styles/globals.css";
+import DarkModeToggle from "../components/layout/DarkModeToggle";
 import "@fortawesome/fontawesome-free/css/fontawesome.min.css";
 import "@fortawesome/fontawesome-free/css/regular.min.css";
 import "@fortawesome/fontawesome-free/css/solid.min.css";
 import "@fortawesome/fontawesome-free/css/brands.min.css";
-import { useState } from "react";
-import DarkModeToggle from "../components/layout/DarkModeToggle";
-import Head from 'next/head';
-
 
 function MyApp({ Component, pageProps }) {
 
@@ -24,9 +22,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <UserProvider>
-      <Head>
-        <link rel='icon' href='/icons/favicon-giant.ico'/>
-      </Head>
       <Layout isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} calculatedZoom={calculatedZoom} setCalculatedZoom={setCalculatedZoom} isPhoneMode={isPhoneMode} setPhoneMode={setPhoneMode}>
         <DarkModeToggle isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         <Component {...pageProps} isDarkMode={isDarkMode} isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} calculatedZoom={calculatedZoom} setCalculatedZoom={setCalculatedZoom} isPhoneMode={isPhoneMode} setPhoneMode={setPhoneMode} />
