@@ -10,8 +10,8 @@ function HomePage(props) {
   const { isPhoneMode } = props;
 
   // Determine a cor de fundo com base na condição
-  const backgroundColor = isDarkMode ? "#F5F5DC" : "#232121"; // Substitua com as cores desejadas
-  const color = isDarkMode ? "#232121" : "#ffffff";
+  const backgroundColor = isDarkMode ? "#F5F5DC" : "#1E1E1E"; // Substitua com as cores desejadas
+  const color = isDarkMode ? "#1E1E1E" : "#ffffff";
 
   const containerStyle = {
     backgroundColor: backgroundColor,
@@ -19,7 +19,7 @@ function HomePage(props) {
   };
 
   return (calculatedZoom < 250) | (calculatedZoom >= 250) ? (
-    <div className={styles.container} style={{ backgroundColor, color }}>
+    <div className={styles.container} style={{height: isPhoneMode | (calculatedZoom < 250) ?  "100vh" : "200vh", backgroundColor, color }}>
       <CustomCursor />
       <div className={styles.overlay}></div>
       <div
@@ -60,7 +60,7 @@ function HomePage(props) {
           <h2 className={styles.job} style={{ color }}>
             Backend & AI Developer
           </h2>
-          <div>
+          <div className={styles.button}>
             <ArrowButton color={color}/>
           </div>
         </div>

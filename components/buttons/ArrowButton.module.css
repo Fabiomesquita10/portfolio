@@ -13,7 +13,6 @@
   z-index: 1; /* Ensure the text is on top */
   margin-top: 20px;
   width: 10rem;
-  margin-left: 5rem;
 }
 
 .button::before {
