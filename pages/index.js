@@ -32,7 +32,7 @@ function HomePage(props) {
         <div className={styles.imageContainer}>
           {calculatedZoom <= 150 ? (
             <Image
-              src="/profile_pic.png"
+              src="profile_pic.png"
               alt="Descrição da imagem"
               width={400} // Ajuste conforme necessário
               height={350} // Ajuste conforme necessário
