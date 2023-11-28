@@ -1,0 +1,48 @@
+/* footer.module.css */
+.footer {
+  background-color: #f0f0f0;
+  padding: 10px; /* Decrease the padding to make the footer smaller */
+  text-align: center;
+  z-index: 9999;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20%;
+  justify-content: space-between;
+  border-top: solid 2px red; /* Make the top border 50% smaller */
+  border-radius: 10%;
+}
+
+.footerPhone {
+  background-color: #f0f0f0;
+  padding: 10px; /* Decrease the padding to make the footer smaller */
+  text-align: center;
+  z-index: 9999;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  justify-content: space-between;
+  border-top: solid 2px red; /* Make the top border 50% smaller */
+  border-radius: 10%;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto; /* Center the buttonContainer div */
+}
+
+.icon {
+  border-radius: 100%;
+  margin-right: 5px; /* Add margin to create space between images */
+  margin-left: 5px; /* Add margin to create space between images */
+}
+
+.icon:hover {
+  background-color: red;
+}

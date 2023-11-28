@@ -3,6 +3,7 @@ import { Fragment } from 'react';
 import DarkModeToggle from './DarkModeToggle';
 import MainHeader from './main-header';
 import styles from "./layout.module.css";
+import Footer from './footer';
 
 function Layout(props) {
   const { isMenuOpen } = props;

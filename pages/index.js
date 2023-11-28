@@ -2,6 +2,8 @@ import styles from "../components/homepage/homepage.module.css";
 import CustomCursor from "../components/cursor/customCursor";
 import Image from "next/image";
 import ArrowButton from "../components/buttons/ArrowButton";
+import { Avatar } from "@mui/material";
+import Footer from "../components/layout/footer";
 
 function HomePage(props) {
   const { isDarkMode } = props;
@@ -19,7 +21,14 @@ function HomePage(props) {
   };
 
   return (calculatedZoom < 250) | (calculatedZoom >= 250) ? (
-    <div className={styles.container} style={{height: isPhoneMode | (calculatedZoom < 250) ?  "100vh" : "200vh", backgroundColor, color }}>
+    <div
+      className={styles.container}
+      style={{
+        height: isPhoneMode | (calculatedZoom < 250) ? "100vh" : "200vh",
+        backgroundColor,
+        color,
+      }}
+    >
       <CustomCursor />
       <div className={styles.overlay}></div>
       <div
@@ -29,29 +38,29 @@ function HomePage(props) {
             : styles.content_unzoomed
         }
       >
+        {calculatedZoom < 150 ? (
+          <Avatar
+            alt="Remy Sharp"
+            src="/profile_pic.png"
+            sx={{ width: 250, height: 250 }}
+            className={styles.avatar}
+          />
+        ) : null}
         <div className={styles.imageContainer}>
-          {calculatedZoom <= 150 ? (
-            <Image
-              src="/profile_pic.png"
-              alt="Descrição da imagem"
-              width={400} // Ajuste conforme necessário
-              height={350} // Ajuste conforme necessário
-            />
-          ) : null}
           {(calculatedZoom > 150) & (calculatedZoom <= 200) ? (
-            <Image
+            <Avatar
+              alt="Remy Sharp"
               src="/profile_pic.png"
-              alt="Descrição da imagem"
-              width={280} // Ajuste conforme necessário
-              height={240} // Ajuste conforme necessário
+              sx={{ width: 200, height: 200 }}
+              className={styles.avatar}
             />
           ) : null}
           {calculatedZoom > 200 ? (
-            <Image
+            <Avatar
+              alt="Remy Sharp"
               src="/profile_pic.png"
-              alt="Descrição da imagem"
-              width={170} // Ajuste conforme necessário
-              height={150} // Ajuste conforme necessário
+              sx={{ width: 150, height: 150 }}
+              className={styles.avatar}
             />
           ) : null}
         </div>
@@ -61,10 +70,11 @@ function HomePage(props) {
             Backend & AI Developer
           </h2>
           <div className={styles.button}>
-            <ArrowButton color={color}/>
+            <ArrowButton color={color} />
           </div>
         </div>
       </div>
+      <Footer backgroundColor={backgroundColor} isPhoneMode={isPhoneMode} />
     </div>
   ) : null;
 }
