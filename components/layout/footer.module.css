@@ -1,4 +1,3 @@
-/* footer.module.css */
 .footer {
   background-color: #f0f0f0;
   padding: 10px; /* Decrease the padding to make the footer smaller */
@@ -39,10 +38,16 @@
 
 .icon {
   border-radius: 100%;
-  margin-right: 5px; /* Add margin to create space between images */
-  margin-left: 5px; /* Add margin to create space between images */
+  margin-right: 50px; /* Add margin to create space between images */
+  margin-left: 50px; /* Add margin to create space between images */
+  border: 4px solid white;
+  background-color: white;
 }
 
-.icon:hover {
-  background-color: red;
+.iconPhone {
+  border-radius: 100%;
+  margin-right: 5px; /* Add margin to create space between images */
+  margin-left: 5px; /* Add margin to create space between images */
+  border: 4px solid white;
+  background-color: white;
 }

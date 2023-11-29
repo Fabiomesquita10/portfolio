@@ -5,6 +5,7 @@ import ArrowButton from "../components/buttons/ArrowButton";
 import { Avatar } from "@mui/material";
 import Footer from "../components/layout/footer";
 
+
 function HomePage(props) {
   const { isDarkMode } = props;
   const { isMenuOpen } = props;
