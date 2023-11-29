@@ -73,6 +73,15 @@ function HomePage(props) {
           <div className={styles.button}>
             <ArrowButton color={color} />
           </div>
+          <div 
+            className={styles.infoText}
+            style={{color}}
+          >
+            <p>I'm a Portuguese web developer, a  software engineer born in 2001.<br/>
+              Specializing in backend development and AI, I'm passionate about technology and football.<br/>
+              Explore my portfolio to see how I blend innovation with code.
+            </p>          
+          </div>
         </div>
       </div>
       <Footer backgroundColor={backgroundColor} isPhoneMode={isPhoneMode} />
